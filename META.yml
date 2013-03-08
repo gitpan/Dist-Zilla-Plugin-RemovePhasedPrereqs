@@ -10,7 +10,7 @@ build_requires:
   JSON: 2
   List::Util: 0
   Test::DZil: 0
-  Test::More: 0.88
+  Test::More: 0.96
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
@@ -31,7 +31,7 @@ no_index:
 provides:
   Dist::Zilla::Plugin::RemovePhasedPrereqs:
     file: lib/Dist/Zilla/Plugin/RemovePhasedPrereqs.pm
-    version: 0.001
+    version: 0.002
 requires:
   Dist::Zilla::Role::PrereqSource: 0
   Moose: 0
@@ -46,4 +46,4 @@ resources:
   bugtracker: https://github.com/dagolden/dist-zilla-plugin-removephasedprereqs/issues
   homepage: https://metacpan.org/release/Dist-Zilla-Plugin-RemovePhasedPrereqs
   repository: git://github.com/dagolden/dist-zilla-plugin-removephasedprereqs.git
-version: 0.001
+version: 0.002

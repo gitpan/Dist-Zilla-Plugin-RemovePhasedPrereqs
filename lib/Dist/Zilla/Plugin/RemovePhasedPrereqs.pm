@@ -4,7 +4,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::RemovePhasedPrereqs;
 # ABSTRACT: Remove gathered prereqs from particular phases
-our $VERSION = '0.001'; # VERSION
+our $VERSION = '0.002'; # VERSION
 
 use Moose;
 with 'Dist::Zilla::Role::PrereqSource';
@@ -27,7 +27,7 @@ sub mvp_multivalue_args { values %attr_map }
 has [ values %attr_map ] => (
   is  => 'ro',
   isa => ArrayRef[ ModuleName ],
-  required => 1,
+  default => sub { [] },
 );
 
 around dump_config => sub {
@@ -72,7 +72,7 @@ Dist::Zilla::Plugin::RemovePhasedPrereqs - Remove gathered prereqs from particul
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
